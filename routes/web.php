@@ -15,3 +15,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [FigureController::class, 'index' ]);
+Route::get('/figure/{figure:slug}', [FigureController::class, 'figure']);

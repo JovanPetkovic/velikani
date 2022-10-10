@@ -13,4 +13,11 @@ class FigureController extends Controller
            'figures' => Figure::all()
         ]);
     }
+
+    public function figure($slug)
+    {
+        return view('figure', [
+            'figure' => Figure::where('slug', $slug)->get()->first()
+        ]);
+    }
 }
